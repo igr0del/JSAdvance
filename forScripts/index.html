@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JS Runner</title>
+  <link rel="stylesheet" href="./styles/styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo">JS</div>
+        <div>
+          <div class="title">Script Runner</div>
+          <div class="subtitle">Запускай .js из папки scripts</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Скрипты</div>
+        <ul id="list" class="script-list"></ul>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="topbar-left">
+          <div class="page-title">Панель запуска</div>
+          <div class="hint">Выбери скрипт слева и нажми “Старт”.</div>
+        </div>
+
+        <div class="controls">
+          <button id="start" class="btn btn-primary">▶ Старт</button>
+          <button id="stop" class="btn">■ Стоп</button>
+          <button id="clear" class="btn btn-ghost">✖ Очистить</button>
+        </div>
+      </header>
+
+      <section class="grid">
+        <div class="panel">
+          <div class="panel-header">
+            <div class="panel-title">Консоль</div>
+            <div class="panel-badge">console.log / warn / error</div>
+          </div>
+          <pre id="console" class="terminal" aria-live="polite"></pre>
+        </div>
+
+        <div class="panel">
+          <div class="panel-header">
+            <div class="panel-title">Результат</div>
+            <div class="panel-badge">последняя строка</div>
+          </div>
+          <pre id="result" class="terminal" aria-live="polite"></pre>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span class="dot"></span>
+        <span>Скрипты лежат в <code>/scripts</code>. Обнови страницу после добавления файла.</span>
+      </footer>
+    </main>
+  </div>
+
+  <script src="./app/app.js"></script>
+</body>
+</html>
