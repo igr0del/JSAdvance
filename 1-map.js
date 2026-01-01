@@ -7,7 +7,7 @@ const users = [
 const uniqueIds = new Set(users.map(user => user.id));
 
 const uniqueUsers = [...uniqueIds].map(id => {
-	users.find(user => user.id === id);
+  return users.find(user => user.id === id);
 });
 
 console.log(uniqueUsers);
