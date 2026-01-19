@@ -17,5 +17,13 @@ function convert(sum, initialCurrency, convertCurrency) {
 		throw new Error('Unknown convert currency');
 	}
 
-	return new Intl.NumberFormat('en-US', { style: 'currency', currency: convertCurrency }).format((sum * initial.mult) / convert.mult);
+	return new Intl
+		.NumberFormat('en-US', { style: 'currency', currency: convertCurrency })
+		.format((sum * initial.mult) / convert.mult);
 }
+
+console.log(convert(100, 'USD', 'EUR')); // "€110.00"
+console.log(convert(100, 'EUR', 'RUB')); // "₽6,000.00"
+console.log(convert(100, 'RUB', 'USD')); // "$1.67"
+console.log(convert(100, 'GBP', 'USD')); // Error: Unknown initial currency
+console.log(convert(100, 'USD', 'JPY')); // Error: Unknown convert currency
