@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Генератор бросков кубиков</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<div class="container">
+		<header>
+			<h1><i class="fas fa-dice"></i> Генератор бросков кубиков</h1>
+			<p class="subtitle">Выберите тип кубика и нажмите "Бросить кубик" для получения случайного результата.
+				Идеально для настольных игр!</p>
+		</header>
+
+		<main>
+			<section class="dice-selector">
+				<button class="dice-btn active" data-dice="d4">
+					<i class="fas fa-dice-d4"></i>
+					<span>d4</span>
+				</button>
+				<button class="dice-btn" data-dice="d6">
+					<i class="fas fa-dice-d6"></i>
+					<span>d6</span>
+				</button>
+				<button class="dice-btn" data-dice="d8">
+					<i class="fas fa-dice-d8"></i>
+					<span>d8</span>
+				</button>
+				<button class="dice-btn" data-dice="d10">
+					<i class="fas fa-dice-d10"></i>
+					<span>d10</span>
+				</button>
+				<button class="dice-btn" data-dice="d12">
+					<i class="fas fa-dice-d12"></i>
+					<span>d12</span>
+				</button>
+				<button class="dice-btn" data-dice="d16">
+					<i class="fas fa-dice-d20"></i>
+					<span>d16</span>
+				</button>
+				<button class="dice-btn" data-dice="d20">
+					<i class="fas fa-dice-d20"></i>
+					<span>d20</span>
+				</button>
+			</section>
+
+			<section class="roll-section">
+				<button class="roll-btn" id="rollButton">
+					<i class="fas fa-redo-alt"></i> Бросить кубик
+				</button>
+			</section>
+
+			<section class="result-section">
+				<div class="result-label">Результат броска:</div>
+				<div class="result-value" id="resultValue">-</div>
+				<div class="result-dice" id="resultDice">Выберите кубик и нажмите "Бросить"</div>
+			</section>
+
+			<section class="history-section">
+				<div class="history-title">
+					<span>История бросков</span>
+					<button class="clear-history" id="clearHistory">Очистить</button>
+				</div>
+				<ul class="history-list" id="historyList">
+					<!-- История бросков будет добавляться сюда -->
+				</ul>
+			</section>
+
+			<section class="instructions">
+				<h3><i class="fas fa-info-circle"></i> Как использовать</h3>
+				<p>1. Выберите тип кубика, который хотите бросить (d4, d6, d8, d10, d12, d16, d20).</p>
+				<p>2. Нажмите кнопку "Бросить кубик" для получения случайного числа.</p>
+				<p>3. Результат отобразится в центре экрана и добавится в историю бросков.</p>
+				<p>4. Вы можете просматривать историю бросков и очистить её при необходимости.</p>
+
+				<div class="dice-info">
+					<div class="dice-info-item">
+						<div class="dice-type">d4</div>
+						<div class="dice-range">1-4</div>
+					</div>
+					<div class="dice-info-item">
+						<div class="dice-type">d6</div>
+						<div class="dice-range">1-6</div>
+					</div>
+					<div class="dice-info-item">
+						<div class="dice-type">d8</div>
+						<div class="dice-range">1-8</div>
+					</div>
+					<div class="dice-info-item">
+						<div class="dice-type">d10</div>
+						<div class="dice-range">1-10</div>
+					</div>
+					<div class="dice-info-item">
+						<div class="dice-type">d12</div>
+						<div class="dice-range">1-12</div>
+					</div>
+					<div class="dice-info-item">
+						<div class="dice-type">d16</div>
+						<div class="dice-range">1-16</div>
+					</div>
+					<div class="dice-info-item">
+						<div class="dice-type">d20</div>
+						<div class="dice-range">1-20</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<p>Генератор бросков кубиков для настольных игр &copy; 2023</p>
+		</footer>
+	</div>
+
+	<script src="scripts.js"></script>
+</body>
+</html>
