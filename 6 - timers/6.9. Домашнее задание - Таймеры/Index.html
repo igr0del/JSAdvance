@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Таймер до Нового года</title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="icon"
+		href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎄</text></svg>">
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>Таймер до Нового года</h1>
+			<p class="subtitle">Осталось времени до 1 января</p>
+		</header>
+
+		<main>
+			<!-- Контейнер для отображения таймера -->
+			<div class="timer-container">
+				<div class="timer-display">
+					<!-- Каждый элемент таймера -->
+					<div class="time-unit">
+						<div class="time-value" id="months">0</div>
+						<div class="time-label">месяцев</div>
+					</div>
+					<div class="time-unit">
+						<div class="time-value" id="days">0</div>
+						<div class="time-label">дней</div>
+					</div>
+					<div class="time-unit">
+						<div class="time-value" id="hours">0</div>
+						<div class="time-label">часов</div>
+					</div>
+					<div class="time-unit">
+						<div class="time-value" id="minutes">0</div>
+						<div class="time-label">минут</div>
+					</div>
+					<div class="time-unit">
+						<div class="time-value" id="seconds">0</div>
+						<div class="time-label">секунд</div>
+					</div>
+				</div>
+		
+				<!-- Дополнительная информация -->
+				<div class="info">
+					<p>Следующий Новый год наступит <span id="nextYear">2024</span> года</p>
+					<p class="progress-text">Прогресс до Нового года: <span id="progressPercent">0</span>%</p>
+					<div class="progress-bar">
+						<div class="progress-fill" id="progressFill"></div>
+					</div>
+				</div>
+			</div>
+		
+			<!-- Новогоднее изображение -->
+			<div class="new-year-image">
+				<div class="image-placeholder">🎄🎁🎅⛄</div>
+			</div>
+		</main>
+		
+		<footer>
+			<p>Таймер обновляется каждую секунду</p>
+			<p class="hint">* Месяцы считаются приблизительно (средняя продолжительность месяца = 30.44 дней)</p>
+		</footer>
+	</div>
+	<script src="./scripts.js"></script>
+</body>
+</html>
