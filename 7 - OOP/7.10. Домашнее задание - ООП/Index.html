@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Персонажи: Орк и Эльф</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<h1>Пример прототипного наследования</h1>
+	<div class="characters">
+		<div class="card" id="orc-card">
+			<h2>Орк</h2>
+			<p>Имя: <span id="orc-name">Громмаш</span></p>
+			<p>Язык: <span id="orc-lang">общий</span></p>
+			<p>Оружие: <span id="orc-weapon">топор</span></p>
+			<button id="orc-speak">Говорить</button>
+			<button id="orc-hit">Ударить</button>
+		</div>
+		<div class="card" id="elf-card">
+			<h2>Эльф</h2>
+			<p>Имя: <span id="elf-name">Леголас</span></p>
+			<p>Язык: <span id="elf-lang">эльфийский</span></p>
+			<p>Тип заклинаний: <span id="elf-spell">природа</span></p>
+			<button id="elf-speak">Говорить</button>
+			<button id="elf-cast">Создать заклинание</button>
+		</div>
+	</div>
+	<div class="log">
+		<h3>Лог событий:</h3>
+		<div id="log-messages"></div>
+	</div>
+
+	<script src="scripts.js"></script>
+</body>
+
+</html>
