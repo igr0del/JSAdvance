@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Калькулятор счетов (OCP)</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<div class="container">
+		<h1>Расчёт стоимости</h1>
+		<form id="billingForm">
+			<div class="form-group">
+				<label>Тип оплаты:</label>
+				<div>
+					<label><input type="radio" name="billingType" value="fix" checked> Фиксированная</label>
+					<label><input type="radio" name="billingType" value="hour"> Почасовая</label>
+					<label><input type="radio" name="billingType" value="item"> За предметы</label>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="amount">Ставка (amount):</label>
+				<input type="number" id="amount" value="100" step="0.01" min="0">
+			</div>
+
+			<div class="form-group" id="hoursGroup">
+				<label for="hours">Количество часов:</label>
+				<input type="number" id="hours" value="1" step="0.5" min="0">
+			</div>
+
+			<div class="form-group" id="itemsGroup">
+				<label for="items">Количество предметов:</label>
+				<input type="number" id="items" value="1" step="1" min="0">
+			</div>
+
+			<button type="button" id="calculateBtn">Рассчитать</button>
+		</form>
+
+		<div class="result">
+			<h2>Результат:</h2>
+			<p id="total">—</p>
+		</div>
+	</div>
+
+	<script src="scripts.js"></script>
+</body>
+
+</html>
