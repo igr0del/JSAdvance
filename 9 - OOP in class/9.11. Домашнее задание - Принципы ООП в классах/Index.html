@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Персонажи: Орк и Эльф</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<h1>🧙‍♂️ Наследование классов ES6: Орк и Эльф</h1>
+
+	<div class="container">
+		<!-- Карточка орка -->
+		<div class="card orc">
+			<h2>Орк</h2>
+			<p><strong>Имя:</strong> <span id="orc-name">Громмаш</span></p>
+			<p><strong>Язык:</strong> <span id="orc-lang">общий</span></p>
+			<p><strong>Оружие:</strong> <span id="orc-weapon">топор</span></p>
+			<div class="buttons">
+				<button id="orc-speak">Говорить</button>
+				<button id="orc-hit">Удар</button>
+			</div>
+		</div>
+
+		<!-- Карточка эльфа -->
+		<div class="card elf">
+			<h2>Эльф</h2>
+			<p><strong>Имя:</strong> <span id="elf-name">Леголас</span></p>
+			<p><strong>Язык:</strong> <span id="elf-lang">эльфийский</span></p>
+			<p><strong>Заклинание:</strong> <span id="elf-spell">Свет</span></p>
+			<div class="buttons">
+				<button id="elf-speak">Говорить</button>
+				<button id="elf-cast">Создать заклинание</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- Блок лога для вывода сообщений -->
+	<div class="log">
+		<h3>📜 Лог событий</h3>
+		<div id="log-messages"></div>
+	</div>
+
+	<script src="scripts.js"></script>
+</body>
+
+</html>
