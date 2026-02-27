@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>PokeAPI — Ditto ability</title>
+	<link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+	<main class="wrap">
+		<section class="card">
+			<header class="card__header">
+				<div>
+					<h1 class="title">PokeAPI</h1>
+					<p class="subtitle">Покажем описание первой способности у Ditto (на английском)</p>
+				</div>
+				<span class="badge">XMLHttpRequest</span>
+			</header>
+
+			<div class="controls">
+				<button id="btn" class="btn">Получить описание</button>
+				<span id="status" class="status status--idle">Готово к запросу</span>
+			</div>
+
+			<div id="result" class="result">
+				<div class="placeholder">
+					Нажми кнопку, и тут появится результат 🙂
+				</div>
+			</div>
+
+			<footer class="card__footer">
+				<small>Источник: PokeAPI (pokemon/ditto → ability.url → flavor_text_entries[en])</small>
+			</footer>
+		</section>
+	</main>
+
+	<script src="scripts.js"></script>
+</body>
+
+</html>
