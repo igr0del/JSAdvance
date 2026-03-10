@@ -22,7 +22,6 @@ function showError(message) {
 }
 
 function escapeHtml(str) {
-  // просто чтобы текст красиво отображался и не ломал HTML
   return String(str)
     .replaceAll('&', '&amp;')
     .replaceAll('<', '&lt;')
@@ -55,7 +54,6 @@ btn.addEventListener('click', function () {
       return;
     }
 
-    // берём первую ability
     const firstAbility = pokemonData.abilities && pokemonData.abilities[0] && pokemonData.abilities[0].ability;
     if (!firstAbility || !firstAbility.url) {
       btn.disabled = false;
@@ -107,7 +105,6 @@ btn.addEventListener('click', function () {
         return;
       }
 
-      // у PokeAPI часто в тексте есть переносы строк/спецсимволы — чуть почистим
       englishText = englishText.replaceAll('\n', ' ').replaceAll('\f', ' ').trim();
 
       resultEl.innerHTML = `
