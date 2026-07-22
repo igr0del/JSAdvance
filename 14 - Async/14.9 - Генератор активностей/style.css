@@ -1,0 +1,14 @@
+.button {
+	background-color: purple;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	font-size: 18px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.wrapper {
+	display: flex;
+	margin-top: 20px;
+}
