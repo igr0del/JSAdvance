@@ -16,23 +16,23 @@ function getMyCoordinates() {
 
 async function getMyCity() {
   try {
-    const { latitude, longitude } = await getMyCordinates();
-    
+    const { latitude, longitude } = await getMyCoordinates();
+
     const response = await fetch(
       `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}`
     );
-    
-    if (!responce.ok) {
+
+    if (!response.ok) {
       throw new Error(`Ошибка запроса: ${response.status}`);
     }
 
-    const data = await responce.json();
+    const data = await response.json();
 
     console.log(data);
     console.log(`Город: ${data.city || data.locality}`);
-  } catch(error) {
+  } catch (error) {
     console.error(error);
   }
 }
 
-getMyCity()
+getMyCity();
