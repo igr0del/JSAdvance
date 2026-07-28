@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Счётчик нажатий</title>
+    
+    <link rel="stylesheet" href="./style.css">
+  </head>
+
+  <body>
+    <main>
+      <p class="counter-card__label">Практическое задание</p>
+
+      <h1 class="counter-card__title">Счётчик нажатий</h1>
+
+      <p class=""counter-card__description">
+        Нажмите на любую кнопку, чтобы увеличить счётчик
+      </p>
+
+      <div class="buttons">
+        <button class="counter-button" type="button">Нажми меня</button>
+        <button class="counter-button" type="button">Нажми меня</button>
+        <button class="counter-button" type="button">Нажми меня</button>
+        <button class="counter-button" type="button">Нажми меня</button>
+        <button class="counter-button" type="button">Нажми меня</button>
+      </div>
+
+      <div class="counter" aria-live="polite">
+        <span class="counter__text">Количество нажатий</span>
+        <span class="counter__number" id="click-count">0</span>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
