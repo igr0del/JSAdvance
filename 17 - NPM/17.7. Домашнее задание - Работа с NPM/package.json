@@ -1,0 +1,13 @@
+{
+  "name": "user-task-rollup",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "rollup src/index.js --file dist/bundle.js --format iife",
+    "start": "live-server dist --open=index.html"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "rollup": "^4.46.2"
+  }
+}
