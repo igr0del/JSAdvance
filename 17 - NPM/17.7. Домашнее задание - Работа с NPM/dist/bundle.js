@@ -21,8 +21,9 @@
     }
   }
 
-  const task = new Task('Задача успешно выполнена!');
+  const task = new Task('Задача выполнена через Rollup!');
   const user = new User(task);
 
   user.do();
+
 })();
